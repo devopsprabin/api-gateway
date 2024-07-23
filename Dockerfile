@@ -6,6 +6,6 @@ COPY target/*.jar /app/app.jar
 ENV JAVA_OPTS "-Xms512m -Xmx512m"
 ENV APP_ARGS "-Dspring.config.location=/app/conf/application.properties "
 
-EXPOSE 9090
+EXPOSE 9080
 
 CMD java $JAVA_OPTS $APP_ARGS -jar /app/app.jar
