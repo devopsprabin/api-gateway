@@ -19,7 +19,9 @@ public class SecurityConfig {
                         exchange.pathMatchers("/eureka/**","/actuator/health")
                                 .permitAll()
                                 .anyExchange()
-                                .authenticated())
+//                                .authenticated()
+                                .permitAll()
+                )
                 .oauth2ResourceServer(spec -> spec.jwt(Customizer.withDefaults()));
         return serverHttpSecurity.build();
     }
